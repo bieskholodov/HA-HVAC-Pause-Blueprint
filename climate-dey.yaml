@@ -1,41 +1,41 @@
 blueprint:
-  name: HVAC Daily Schedule
-  description: Set the target HVAC temperature based on its mode.
+  name: Ежедневное расписание систем отопления, вентиляции и кондиционирования воздуха
+  description: Установите целевую температуру HVAC в зависимости от ее режима.
   domain: automation
 
   input:
     climate_id:
-      name: Thermostat
-      description: The thermostat to control.
+      name: Термостат
+      description: Термостат для управления.
       selector:
         entity:
           domain: climate
 
     cooling_temp:
-      name: Cool Set Point
-      description: The target temperature when cooling.
+      name: Уставка охлаждение 
+      description: Целевая температура при охлаждении.
       selector:
         number:
           min: 0
           max: 100
 
     heating_temp:
-      name: Heat Set Point
-      description: The target temperature when heating.
+      name: Уставка нагрева
+      description: Целевая температура при нагреве
       selector:
         number:
           min: 0
           max: 100
 
     at_time:
-      name: Time
-      description: The time to update this device.
+      name: Время
+      description: Пришло время обновить это устройство.
       selector:
         time:
 
     retry_timeout:
-      name: Retry Timeout
-      description: Duration (in minutes) to retry if the device is offline.
+      name: Тайм-аут повтора
+      description: Продолжительность (в минутах) повторной попытки, если устройство не в сети.
       default: 0
       selector:
         number:
