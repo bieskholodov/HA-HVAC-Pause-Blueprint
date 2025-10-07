@@ -3,7 +3,7 @@ blueprint:
   description: Включайте свет при обнаружении движения.
   domain: automation
   source_url: https://github.com/bieskholodov/Home-assistant/blob/main/motion_light.yaml
-  author: Home Assistant
+  author: bieskholodov
   input:
     motion_entity:
       name: Датчик движения
