@@ -22,17 +22,6 @@ blueprint:
           - group
           - binary_sensor
           multiple: false
-    doors_windows:
-      description: Группы , которые будут активировать автоматизацию. (Предполагается «включено»
-        означает «открытый»)
-      name: Датчики дверей и окон.
-      selector:
-        entity:
-          domain:
-          - group
-          - binary_sensor
-          multiple: false          
-
     pause_delay:
       description: Пришло время подождать, прежде чем приостанавливать работу системы HVAC.
       name: Задержка паузы
