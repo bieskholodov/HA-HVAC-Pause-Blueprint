@@ -1,1 +1,1 @@
-# HA-HVAC-Pause-Blueprint
+Проекты автоматизаций home assistant
