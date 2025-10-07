@@ -1,5 +1,5 @@
 blueprint:
-  name: HVAC Pause V1.7.2
+  name: Отопление окно 
   description: Приостанавливает работу системы отопления, вентиляции и кондиционирования воздуха при открытии окон/дверей; возобновляет последнее состояние после закрытия
   domain: automation
   source_url: https://github.com/bieskholodov/HA-HVAC-Pause-Blueprint/blob/main/hvac_pause.yaml
