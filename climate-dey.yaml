@@ -43,43 +43,43 @@ blueprint:
           max: 240
 
     on_monday:
-      name: Monday
+      name: Понедельник
       default: true
       selector:
         boolean:
 
     on_tuesday:
-      name: Tuesday
+      name: Вторник
       default: true
       selector:
         boolean:
 
     on_wednesday:
-      name: Wednesday
+      name: Среда
       default: true
       selector:
         boolean:
 
     on_thursday:
-      name: Thursday
+      name: Четверг
       default: true
       selector:
         boolean:
 
     on_friday:
-      name: Friday
+      name: Пятница
       default: true
       selector:
         boolean:
 
     on_saturday:
-      name: Saturday
+      name: Суббота
       default: true
       selector:
         boolean:
 
     on_sunday:
-      name: Sunday
+      name: Воскресенье
       default: true
       selector:
         boolean:
