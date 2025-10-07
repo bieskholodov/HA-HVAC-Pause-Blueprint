@@ -1,12 +1,12 @@
 blueprint:
-  name: Motion-activated Light
-  description: Turn on a light when motion is detected.
+  name: Свет, активируемый движением
+  description: Включайте свет при обнаружении движения.
   domain: automation
-  source_url: https://github.com/home-assistant/core/blob/dev/homeassistant/components/automation/blueprints/motion_light.yaml
+  source_url: https://github.com/bieskholodov/Home-assistant/blob/main/motion_light.yaml
   author: Home Assistant
   input:
     motion_entity:
-      name: Motion Sensor
+      name: Датчик движения
       selector:
         entity:
           filter:
@@ -21,8 +21,8 @@ blueprint:
           entity:
             domain: light
     no_motion_wait:
-      name: Wait time
-      description: Time to leave the light on after last motion is detected.
+      name: Время ожидания
+      description: Время оставить свет включенным после обнаружения последнего движения.
       default: 120
       selector:
         number:
@@ -30,8 +30,8 @@ blueprint:
           max: 3600
           unit_of_measurement: seconds
 
-# If motion is detected within the delay,
-# we restart the script.
+# Если движение обнаружено в течение задержки,
+# мы перезапускаем скрипт.
 mode: restart
 max_exceeded: silent
 
@@ -42,17 +42,17 @@ triggers:
   to: "on"
 
 actions:
-  - alias: "Turn on the light"
+  - alias: "Включи свет"
     action: light.turn_on
     target: !input light_target
-  - alias: "Wait until there is no motion from device"
+  - alias: "Подождите, пока устройство не прекратит движение."
     wait_for_trigger:
       trigger: state
       entity_id: !input motion_entity
       from: "on"
       to: "off"
-  - alias: "Wait the number of seconds that has been set"
+  - alias: "Подождите заданное количество секунд."
     delay: !input no_motion_wait
-  - alias: "Turn off the light"
+  - alias: "Выключите свет"
     action: light.turn_off
     target: !input light_target
