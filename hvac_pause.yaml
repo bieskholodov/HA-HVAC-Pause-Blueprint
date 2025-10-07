@@ -22,6 +22,12 @@ blueprint:
           - group
           - binary_sensor
           multiple: false
+      selector:
+        entity:
+          domain:
+          - group
+          - binary_sensor
+          multiple: false
     pause_delay:
       description: Пришло время подождать, прежде чем приостанавливать работу системы HVAC.
       name: Задержка паузы
